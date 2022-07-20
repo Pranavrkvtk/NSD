@@ -1,4 +1,4 @@
-
+#shell sript to print specified range of lines from a given files
 if [ $# -ne 2 ]
 then 
 	echo "Syntax error <$0> <sorce file> <destination file>"
