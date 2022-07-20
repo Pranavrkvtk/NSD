@@ -1,3 +1,5 @@
+#shell script to display a file from last line to first line
+
 if [ $# -ne 1 ]
 then
 echo "Syntax error"
