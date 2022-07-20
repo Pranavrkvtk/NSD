@@ -1,4 +1,4 @@
-
+#shell script to display all lines if a file containging word linux
 if [ $# -ne 0 ]
 then
 echo "syntax error, syntax is <$0>"
