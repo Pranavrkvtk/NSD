@@ -1,0 +1,32 @@
+#!/bin/bash
+while :
+do
+echo  "SELECT YOUR OPTION";
+echo "1. List all ordinary files"
+echo "2. List all directory files"
+echo "3. List all special files"
+echo "4. List all files readable to ugo "
+echo "5. List all files writable to ugo "
+echo "6. List all files execute to ugo "
+echo "7. exit "
+echo -n "Enter your menu choice [1-7]: "
+read choice
+case $choice in
+  1)  echo "Ordinary files"
+     ls -p | grep -v / ;;
+  2)  echo "Directory files"
+      ls -d */;;
+  3)  echo "Special files"
+      ls -b ;;    
+  4) echo "Readable files"
+      find -maxdepth 1 -type f -perm /444 ;;    
+  5)  echo "Writable files"
+      find -maxdepth 1 -type f -perm /222 ;;    
+  6)  echo "Executable files"
+      find -maxdepth 1 -type f -perm /111 ;;    
+  7)  echo "Quitting ..."
+      exit;;
+  *) echo "invalid option";;
+esac
+  echo -n "Enter your menu choice [1-4]: "
+done
